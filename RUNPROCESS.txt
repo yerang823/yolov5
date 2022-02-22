@@ -1,0 +1,8 @@
+in jupyter notebook
+
+!python train.py --batch-size 64 --data='../data/cervix.yaml' --device 0,1,2,3
+
+# save .txt 
+!python val.py --data=../data/cervix.yaml --weights ../result/runs/train/exp9/weights/last.pt --save-txt --project=../result/runs/val/ --name=exp2
+
+!python eval.py
